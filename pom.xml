@@ -17,10 +17,11 @@
         <java.version>1.8</java.version>
     </properties>
     <dependencies>
-        <dependency>
+        <!--Enable spring-boot-starter-web only in local env to access H2 DB console-->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
