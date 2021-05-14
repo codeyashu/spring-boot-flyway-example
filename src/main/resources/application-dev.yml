@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://cmd-pg-dev01.postgres.database.azure.com:5432/cmd_pg_dev01?ssl=true&sslmode=require
+    driver-class-name: org.postgresql.Driver
+    username: admin_pg_dev01@cmd-pg-dev01
+    password: Z1sh@Rha!
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    user: admin_pg_dev01@cmd-pg-dev01
+    url: jdbc:postgresql://cmd-pg-dev01.postgres.database.azure.com:5432/cmd_pg_dev01?ssl=true&sslmode=require
+    password: Z1sh@Rha!
+    baseline-on-migrate: true
+    baseline-version: 1
+    baseline-description: Initial DB migration
+
