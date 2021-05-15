@@ -17,8 +17,12 @@ on:
       env:
         description: "Data Ingestion Environment(DEV/SIT/PP/PROD)"
         required: true
-        
-#on:
+      logLevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+
+    #on:
  # push:
   #  branches: [ main ]
   #pull_request:
@@ -35,6 +39,8 @@ jobs:
       
 
     steps:
+    - name: Validate logLevel
+      run: logLevel=${{ github.event.inputs.logLevel }} node .github/scripts/validateInputs.js
     - name : Git checkout
       uses: actions/checkout@v2
     - name: Branch name
