@@ -14,6 +14,9 @@ on:
         default: 'Default branch for PP/SIT is main and for lower env develop'
         # Input has to be provided for the workflow to run
         required: true
+      env:
+        description: "Environment to deploy to"
+        required: true
         
 #on:
  # push:
@@ -28,7 +31,7 @@ jobs:
     
     
     environment:
-      name: dev
+      name: ${{github.event.inputs.env}}
       url: https://github.com
 
     steps:
