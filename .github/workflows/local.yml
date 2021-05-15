@@ -45,6 +45,9 @@ jobs:
       with:
         node-version: '14'
         check-latest: true
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
     - name: Validate logLevel
       run: logLevel=${{ github.event.inputs.logLevel }} node .github/scripts/validateInputs.js
     - name : Git checkout
