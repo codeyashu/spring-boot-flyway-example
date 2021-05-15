@@ -1,0 +1,1 @@
+[![Cloud Data Ingestion Workflow](https://github.com/codeyashu/spring-boot-flyway-example/actions/workflows/local.yml/badge.svg?branch=main)](https://github.com/codeyashu/spring-boot-flyway-example/actions/workflows/local.yml)
