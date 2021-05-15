@@ -11,11 +11,10 @@ on:
         # Friendly description to be shown in the UI instead of 'name'
         description: 'Change description'
         # Default value if no value is explicitly provided
-        #default: 'World'
+        default: 'Default branch for PP/SIT is main and for lower env develop'
         # Input has to be provided for the workflow to run
         required: true
-        default: main 
-
+        
 #on:
  # push:
   #  branches: [ main ]
