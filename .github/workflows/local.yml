@@ -16,6 +16,7 @@ on:
         required: true
       env:
         description: "Data Ingestion Environment(DEV/SIT/PP/PROD)"
+        options: ['dev','sit','pp','prod']
         required: true
       logLevel:
         description: 'Log Level'
@@ -39,6 +40,11 @@ jobs:
       
 
     steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        check-latest: true
     - name: Validate logLevel
       run: logLevel=${{ github.event.inputs.logLevel }} node .github/scripts/validateInputs.js
     - name : Git checkout
