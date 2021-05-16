@@ -38,10 +38,7 @@ jobs:
       name: ${{github.event.inputs.env}}
       
 
-    steps:    
-    - name: check lower environmnet
-      if: ${{github.event.inputs.env == 'DEV'}}
-      run: echo Valid branch
+    steps:        
     - name : Git checkout
       uses: actions/checkout@v2
     - name: Branch name
