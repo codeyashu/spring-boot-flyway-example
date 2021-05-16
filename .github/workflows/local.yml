@@ -15,8 +15,7 @@ on:
         # Input has to be provided for the workflow to run
         required: true
       env:
-        description: "Data Ingestion Environment(DEV/SIT/PP/PROD)"
-        options: ['dev','sit','pp','prod']
+        description: "Data Ingestion Environment(DEV/SIT/PP/PROD)"        
         required: true
       logLevel:
         description: 'Log Level'
@@ -39,17 +38,7 @@ jobs:
       name: ${{github.event.inputs.env}}
       
 
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-        check-latest: true
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    - name: Validate logLevel
-      run: logLevel=${{ github.event.inputs.logLevel }} node .github/scripts/validateInputs.js
+    steps:        
     - name : Git checkout
       uses: actions/checkout@v2
     - name: Branch name
