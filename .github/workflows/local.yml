@@ -37,7 +37,7 @@ jobs:
 
     steps:
     - name: check lower environmnet
-      if: "contains(github.event.inputs.env, 'dev')"
+      if: "!contains(github.event.inputs.env, 'dev')"
       run: exit 1
     - name : Git checkout
       uses: actions/checkout@v2
