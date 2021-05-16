@@ -6,6 +6,8 @@ spring:
     password:
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
   flyway:
     user: sa
     url: jdbc:h2:mem:testdb
