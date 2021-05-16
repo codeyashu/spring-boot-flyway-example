@@ -17,10 +17,7 @@ on:
       env:
         description: "Data Ingestion Environment(DEV/SIT/PP/PROD)"        
         required: true
-      logLevel:
-        description: 'Log Level'
-        required: true
-        default: 'warning'
+
 
     #on:
  # push:
