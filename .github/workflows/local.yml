@@ -26,6 +26,7 @@ on:
    # branches: [ main ]
 
 jobs:
+  name: Run data load script in ${{github.event.inputs.env}}
   build:
 
     runs-on: ubuntu-latest
